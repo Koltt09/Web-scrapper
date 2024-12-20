@@ -2,7 +2,7 @@ import requests
 import time
 from bs4 import BeautifulSoup
 
-def obtener_titulares(url):
+def Get_headers(url):
     try:
         #Make a GET request to the webpage
         Response = requests.get(url)
@@ -35,6 +35,6 @@ while True:
     if User_URL.lower() == "exit":
         break
     
-    obtener_titulares(User_URL)
+    Get_headers(User_URL)
     print("Refreshing...")
     time.sleep(2)
